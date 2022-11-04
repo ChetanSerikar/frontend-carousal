@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    background-color: #fafafa;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+img {
+    height: 200px;
+    width: 350px;
+}
+
+#imageListId {
+    margin: 0;
+    padding: 0;
+   display: flex;
+   overflow: auto;
+}
+
+#imageListId div {
+    margin: 0 4px 4px 4px;
+    padding: 0.4em;
+    display: inline-block;
+}
+
+
+.listitemClass {
+    width: 350px;
+}
+
+.height {
+    height: 10px;
+}

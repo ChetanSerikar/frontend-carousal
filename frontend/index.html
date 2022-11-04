@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Image carousal-frontend
+    </title>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js">
+    </script>
+
+   
+
+    <script>
+        $(function () {
+            $("#imageListId").sortable({
+                update: function (event, ui) {
+                    getIdsOfImages();
+                }
+            });
+        });
+
+        function getIdsOfImages() {
+            var values = [];
+            $('.listitemClass').each(function (index) {
+                values.push($(this).attr("id")
+                    .replace("imageNo", ""));
+            });
+
+            $('#outputvalues').val(values);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="color:#333">Image Carousal</h1>
+
+    <p>Drag and drop Sortable</p>
+
+    <div class="height"></div><br>
+
+    <div id="imageListId">
+        <div id="imageNo1" class="listitemClass">
+            <img src="images/pic1.jpg" alt="pic1">
+        </div>
+
+        <div id="imageNo2" class="listitemClass">
+            <img src="images/pic2.jpg" alt="pic2">
+        </div>
+
+        <div id="imageNo3" class="listitemClass">
+            <img src="images/pic3.jpg" alt="pic3">
+        </div>
+
+        <div id="imageNo4" class="listitemClass">
+            <img src="images/pic4.jpg" alt="pic4">
+        </div>
+        <div id="imageNo1" class="listitemClass">
+            <img src="images/pic1.jpg" alt="pic1">
+        </div>
+
+        <div id="imageNo2" class="listitemClass">
+            <img src="images/pic2.jpg" alt="pic2">
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
